@@ -6,6 +6,7 @@ html {
   .div-sidebar {    
     color: #eceffe;
     background-color: #0a1226;
+    height: 100%;
   }
   
   .div-main {
@@ -84,7 +85,7 @@ html {
     background: #eee;
   }
   
-  .status_paid, .status_pending, .status_refunded {
+  .status_paid, .status_pending, .status_refunded, .status_PAID, .status_PENDING, .status_REFUNDED {
     text-transform: uppercase;
     background: #52cdb5;
     padding: 3px 10px;
@@ -92,11 +93,11 @@ html {
     border-radius: 5px;
   }
   
-  .status_pending {
+  .status_pending, status_PENDING {
     background: #fda328;
   }
   
-  .status_refunded {
+  .status_refunded, .status_REFUNDED {
     background: #4f6ef7;
   }
   

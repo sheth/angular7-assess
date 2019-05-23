@@ -5,7 +5,7 @@
   <div class="tab">Paid</div>
   <div class="tab">Refunded</div>
 </div>
-<h2>February 2019</h2>
+<h2>{{payments.month}}</h2>
 <table>
   <thead>
     <tr>
@@ -16,34 +16,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Invoice XNj1LmZrgKQCAH3r1ZETqm</td>
-      <td>$100.00 USD</td>
-      <td><span class="status_paid">PAID</span></td>
-      <td>Today, 2:59pm</td>
-    </tr>
-    <tr>
-      <td>Invoice XNj1LmZrgKQCAH3r1ZETqm</td>
-      <td>$100.00 USD</td>
-      <td><span class="status_paid">PAID</span></td>
-      <td>Today, 2:59pm</td>
-    </tr>
-    <tr>
-      <td>Invoice XNj1LmZrgKQCAH3r1ZETqm</td>
-      <td>$100.00 USD</td>
-      <td><span class="status_paid">PAID</span></td>
-      <td>Today, 2:59pm</td>
-    </tr>
-    <tr>
-      <td>Invoice XNj1LmZrgKQCAH3r1ZETqm</td>
-      <td>$100.00 USD</td>
-      <td><span class="status_pending">PENDING</span></td>
-      <td>Today, 2:59pm</td>
-    </tr>
-    <tr>
-      <td>Invoice XNj1LmZrgKQCAH3r1ZETqm</td>
-      <td>$100.00 USD</td>
-      <td><span class="status_refunded">REFUNDED</span></td>
-      <td>Today, 2:59pm</td>
-    </tr>  </tbody>
+      <tr *ngFor="let txn  of payments.transactions">
+        <td>{{ txn.id }}</td>
+        <td> {{ txn.amount }}</td>
+        <td><span [className]="'status_' + txn.status">{{ txn.status }}</span></td>
+        <td> {{ txn.date }}</td>
+      </tr>
+  </tbody>
 </table>
