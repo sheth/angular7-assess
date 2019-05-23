@@ -1,1 +1,122 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    font-family: sans-serif;
+  }
+
+  .div-sidebar {    
+    color: #eceffe;
+    background-color: #0a1226;
+  }
+  
+  .div-main {
+  }
+  
+  h1 {
+    font-size: 18px;
+  }
+  
+  h2 {
+    font-size: 16px;
+  }
+  
+  .tab-bar {
+    border-bottom: solid #ccc 1px;
+    margin-bottom: 30px;
+    overflow: visible;
+  }
+  
+  .tab {
+    display: inline-block;
+    width: 75px;
+    text-align: center;
+    font-size: 12px;
+    padding: 5px 0;
+    vertical-align: bottom;
+    cursor: pointer;
+  }
+  
+  .tab:hover {
+    border-bottom: 1px solid;
+    margin-bottom: -1px;
+  }
+  
+  .tab.active {
+    color: #4a71f8;
+    border-bottom: 1px solid;
+    margin-bottom: -1px;
+  }
+  
+  table {
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+    overflow: scroll;
+    font-size: 12px;
+  }
+  
+  thead {
+    color: #555;
+  }
+  
+  tbody td:first-child::before {
+    content:'';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #1a2c57;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    outline: none;
+  }
+  
+  thead th, tbody td {
+    border-bottom: solid #ccc 1px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  
+  tr {
+    transition: .3s all;
+  }
+  
+  tbody tr:hover {
+    background: #eee;
+  }
+  
+  .status_paid, .status_pending, .status_refunded {
+    text-transform: uppercase;
+    background: #52cdb5;
+    padding: 3px 10px;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .status_pending {
+    background: #fda328;
+  }
+  
+  .status_refunded {
+    background: #4f6ef7;
+  }
+  
+  /* Tablet */
+  @media only screen and (max-width: 600px) {
+    div-main {
+  
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    table th {
+      display: none;
+    }
+    table td {
+      display: block;
+      border: none;
+      padding: 5px 0;
+    }
+    table tr {
+      border-bottom: solid #ccc 2px;
+    }
+  }
