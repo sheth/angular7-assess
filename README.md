@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
 ## Demo
-Click `https://sheth.github.io/angular7-assess/` to see it working.
+Click [https://sheth.github.io/angular7-assess/]`https://sheth.github.io/angular7-assess/` to see it working.
 
 ## Development server
 
