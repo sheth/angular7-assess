@@ -1,15 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
-html {
-    font-family: sans-serif;
-  }
+html,body,.col-md-12,.row {
+  height:100%;
+}
+.row > div {
+  height:100%;
+}
 
-  .div-sidebar {    
+  .div-sidebar, .nav-sidebar {    
     color: #eceffe;
     background-color: #0a1226;
     height: 100%;
   }
   
+  .well-sidebar {    
+    color: #eceffe;
+    background-color: #212a41;
+    border-style: none;
+    padding: 0 20px 0 0 
+  }
+  
+  .well-sidebar2 {    
+    color: #eceffe;
+    background-color: #212a41;
+    border-style: none;
+    padding: 0 0 0 10px
+  }
+  
   .div-main {
+    height: 100%;
   }
   
   h1 {
@@ -19,7 +37,14 @@ html {
   h2 {
     font-size: 16px;
   }
-  
+  /*  making the cells of equal height in bootstrap row */
+  .equal {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    height:100%;
+  }
+
   .tab-bar {
     border-bottom: solid #ccc 1px;
     margin-bottom: 30px;
@@ -59,7 +84,8 @@ html {
     color: #555;
   }
   
-  tbody td:first-child::before {
+  
+  tbody td:first-child::before , .username::before {
     content:'';
     display: inline-block;
     width: 20px;
@@ -93,7 +119,7 @@ html {
     border-radius: 5px;
   }
   
-  .status_pending, status_PENDING {
+  .status_pending, .status_PENDING {
     background: #fda328;
   }
   
@@ -104,7 +130,7 @@ html {
   /* Tablet */
   @media only screen and (max-width: 600px) {
     div-main {
-  
+      height: 100%;
     }
   }
   

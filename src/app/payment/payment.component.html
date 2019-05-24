@@ -1,9 +1,9 @@
 
 <h1>Payments</h1>
 <div class="tab-bar">
-  <div class="tab active">All Invoices</div>
-  <div class="tab">Paid</div>
-  <div class="tab">Refunded</div>
+  <div class="tab active" (click)="onTabSelect('All')">All Invoices</div>
+  <div class="tab" (click)="onTabSelect('Paid')">Paid</div>
+  <div class="tab" (click)="onTabSelect('Refunded')">Refunded</div>
 </div>
 <h2>{{payments.month}}</h2>
 <table>
@@ -16,7 +16,7 @@
     </tr>
   </thead>
   <tbody>
-      <tr *ngFor="let txn  of payments.transactions">
+      <tr *ngFor="let txn  of tabPayments">
         <td>{{ txn.id }}</td>
         <td> {{ txn.amount }}</td>
         <td><span [className]="'status_' + txn.status">{{ txn.status }}</span></td>

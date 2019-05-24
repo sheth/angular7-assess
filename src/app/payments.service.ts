@@ -5,9 +5,6 @@ import * as moment from 'moment'
 })
 export class PaymentsService {
   payments = 
-  { 
-    "month": "February 2019",
-    "transactions": 
     [
       {
       "id": "Invoice XNj1LmZrgKQCAH3r1ZETqm",
@@ -73,11 +70,15 @@ export class PaymentsService {
       "date": "Feb 8, 12:59pm"
       }
     ]
-   }
   
   constructor() { }
 
-  public getPayments(): {month:String, transactions:Array<{id:String, amount:String, status:String, date:String}>} {
+  public getPayments(): Array<{id:String, amount:String, status:String, date:String}> {
     return this.payments;
   }
+
+  randomDate(start:Date, end:Date): Date {
+    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+  }
+
 }
