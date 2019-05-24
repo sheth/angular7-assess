@@ -73,7 +73,7 @@ export class PaymentsService {
   
   constructor() { }
 
-  public getPayments(): Array<{id:String, amount:String, status:String, date:String}> {
+  public getPayments(): Array<{id:string, amount:string, status:string, date:string}> {
     return this.payments;
   }
 

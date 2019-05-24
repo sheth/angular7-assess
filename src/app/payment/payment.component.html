@@ -16,7 +16,7 @@
     </tr>
   </thead>
   <tbody>
-      <tr *ngFor="let txn  of tabPayments">
+      <tr *ngFor="let txn  of tabPayments" @enterLeave>
         <td>{{ txn.id }}</td>
         <td> {{ txn.amount }}</td>
         <td><span [className]="'status_' + txn.status">{{ txn.status }}</span></td>
