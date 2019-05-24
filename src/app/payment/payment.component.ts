@@ -41,6 +41,7 @@ export class PaymentComponent implements OnInit {
   payments:Array<Payment>;
   tabPayments:Array<Payment>;
   activeTab:Tab;
+  paymentMonth: string = "February 2019";
 
   constructor(public paymentsService: PaymentsService) { }
 
